@@ -12,7 +12,7 @@ export const getResep = (resep) => {
 
 export const fetchResep = () => {
   return dispatch => {
-    axios.get('http://192.168.56.1:3001/resep')
+    axios.get('http://192.168.57.1:3001/resep')
          .then((response) => {
            dispatch(getResep(response.data))
          })
@@ -25,7 +25,7 @@ export const fetchResep = () => {
 export const addResep = (bahan, langkah, title, file, accesstoken) => {
   console.log('yeahhhhhhh',bahan, langkah, title, file, accesstoken)
   return dispatch => {
-    RNFetchBlob.fetch('POST', 'http://192.168.56.1:3001/resep/create', {
+    RNFetchBlob.fetch('POST', 'http://192.168.57.1:3001/resep/create', {
       Authorization : "Bearer access-token",
       otherHeader : "foo",
       access_token: accesstoken,
@@ -36,7 +36,7 @@ export const addResep = (bahan, langkah, title, file, accesstoken) => {
       { name : 'title', data : JSON.stringify(title)},
       { name : 'file', filename : file.fileName, data: file.data},
     ]).then((resp) => {
-      RNFetchBlob.fetch('GET', 'http://192.168.56.1:3001/resep', {
+      RNFetchBlob.fetch('GET', 'http://192.168.57.1:3001/resep', {
         Authorization : 'Bearer access-token...',
         // more headers  ..
       })

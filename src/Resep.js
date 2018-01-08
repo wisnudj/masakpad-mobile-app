@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import { Image, ScrollView, TouchableOpacity } from 'react-native';
-import { Container, Header, Content, Card, CardItem, Thumbnail, Text, Button, Icon, Left, Body, Right, Fab, View } from 'native-base';
+import { Image, ScrollView, TouchableOpacity, StyleSheet } from 'react-native';
+import { Spinner,Container, Header, Content, Card, CardItem, Thumbnail, Text, Button, Icon, Left, Body, Right, Fab, View } from 'native-base';
 import {connect} from 'react-redux'
 import {fetchResep} from '../actions/resepActions'
 import ResepDetail from './ResepDetail'
@@ -33,6 +33,8 @@ class Resep extends Component {
     const {navigate} = this.props.navigation
     return (
       <ScrollView>
+        {this.props.reseps.length === 0 ? <Spinner color='green' style={styles.refresh}/> : <Text/>}
+        
         {this.props.reseps.map((resep, index) => {
           return(
             <Content key={index}>
@@ -68,6 +70,7 @@ class Resep extends Component {
           </Content>
           )
         })}
+
         <View style={{ flex: 1 }}>
           <Fab
             active={this.state.active}
@@ -79,6 +82,7 @@ class Resep extends Component {
             <Icon name="share" />
           </Fab>
         </View>
+        
       </ScrollView>
     );
   }
@@ -86,7 +90,7 @@ class Resep extends Component {
 
 const mapStateToProps = (state) => {
   return {
-    reseps: state.reducer.resep,
+    reseps: state.reducer.resep || [],
     access_token: state.reducer.access_token
   }
 }
@@ -97,5 +101,14 @@ const mapDispatchToProps = (dispatch) => {
     likeResep: (idResep, accesstoken) => dispatch(likeResep(idResep, accesstoken))
   }
 }
+
+const styles = StyleSheet.create({
+  refresh: {
+    justifyContent: 'center',
+    alignItems: 'center'
+  }
+
+})
+
 
 export default connect(mapStateToProps, mapDispatchToProps)(Resep);
