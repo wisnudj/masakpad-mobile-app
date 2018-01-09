@@ -17,7 +17,12 @@ class Main extends Component {
 
   render() {
     const ResepNavigation = StackNavigator({
-      Resep: {screen: Resep},
+      Resep: {
+        screen: Resep,
+        navigationOptions: ({navigation}) => ({
+          title: `Home`,
+        })
+      },
       ResepDetail: {screen: ResepDetail},
       NewResep: {screen: NewResep},
       NewRecook: {screen: NewRecook}

@@ -11,14 +11,14 @@ export const getToken = (acces_token) => {
 
 export const signup = (name, email, password) => {
   return dispatch => {
-    axios.post('http://192.168.57.1:3001/user/signup', {
+    axios.post('http://192.168.58.1:3001/user/signup', {
       name: name,
       email: email,
       password: password
     })
     .then(function(tahi) {
       console.log(tahi)
-      axios.post('http://192.168.57.1:3001/user/signin', {
+      axios.post('http://192.168.58.1:3001/user/signin', {
         email: email,
         password: password
       })
@@ -32,7 +32,7 @@ export const signup = (name, email, password) => {
 
 export const signin = (email, password) => {
   return dispatch => {
-    axios.post('http://192.168.57.1:3001/user/signin', {
+    axios.post('http://192.168.58.1:3001/user/signin', {
       email: email,
       password: password
     })

@@ -13,7 +13,7 @@ export const getRecook = (recook) => {
 export const fetchRecook = (resep_id) => {
   console.log(resep_id) 
   return dispatch => {
-    axios.get('http://192.168.57.1:3001/recook/byresep/' + resep_id)
+    axios.get('http://192.168.58.1:3001/recook/byresep/' + resep_id)
          .then((response) => {
            dispatch(getRecook(response.data))
          })
@@ -26,7 +26,7 @@ export const fetchRecook = (resep_id) => {
 export const addRecook = (content, resep_id, file, accesstoken) => {
   console.log('yeahhhhhhh',content,resep_id, file, accesstoken)
   return dispatch => {
-    RNFetchBlob.fetch('POST', 'http://192.168.57.1:3001/recook/create', {
+    RNFetchBlob.fetch('POST', 'http://192.168.58.1:3001/recook/create', {
       Authorization : "Bearer access-token",
       otherHeader : "foo",
       access_token: accesstoken,

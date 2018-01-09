@@ -17,7 +17,6 @@ class Resep extends Component {
     }
   }
 
-
   componentDidMount() {
     this.props.fetchResep()
   }

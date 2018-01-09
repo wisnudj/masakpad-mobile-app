@@ -58,7 +58,8 @@ class ResepDetail extends Component {
   const styles = {
     imageStyle: {
       height: 250,
-      width: 380
+      width: 250,
+      padding: 10
     },
   
     listStyleBahan: {
@@ -127,7 +128,9 @@ class ResepDetail extends Component {
       width: 340,
       height: 40,
       marginBottom: 20,
-      borderRadius: 5
+      borderRadius: 5,
+      alignItems: 'center',
+      justifyContent: 'center'
     },
 
     textRecookButton: {
