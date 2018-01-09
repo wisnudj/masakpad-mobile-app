@@ -1,10 +1,18 @@
 [
     {
+        "merged": "/home/ipung/Documents/PHASE3/tugas/masakpad-mobile-app/android/app/build/intermediates/res/merged/debug/xml/preferences.xml",
+        "source": "/home/ipung/Documents/PHASE3/tugas/masakpad-mobile-app/android/app/build/intermediates/exploded-aar/com.facebook.react/react-native/0.51.0/res/xml/preferences.xml"
+    },
+    {
         "merged": "/home/wisnu/project/masakpadApp/android/app/build/intermediates/res/merged/debug/xml/provider_paths.xml",
         "source": "/home/wisnu/project/masakpadApp/android/app/build/intermediates/exploded-aar/masakpadApp/react-native-image-picker/unspecified/res/xml/provider_paths.xml"
     },
     {
         "merged": "/home/wisnu/project/masakpadApp/android/app/build/intermediates/res/merged/debug/xml/preferences.xml",
         "source": "/home/wisnu/project/masakpadApp/android/app/build/intermediates/exploded-aar/com.facebook.react/react-native/0.51.0/res/xml/preferences.xml"
+    },
+    {
+        "merged": "/home/ipung/Documents/PHASE3/tugas/masakpad-mobile-app/android/app/build/intermediates/res/merged/debug/xml/provider_paths.xml",
+        "source": "/home/ipung/Documents/PHASE3/tugas/masakpad-mobile-app/android/app/build/intermediates/exploded-aar/masakpadApp/react-native-image-picker/unspecified/res/xml/provider_paths.xml"
     }
 ]

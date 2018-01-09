@@ -2,5 +2,9 @@
     {
         "merged": "/home/wisnu/project/masakpadApp/android/app/build/intermediates/res/merged/debug/mipmap-mdpi/ic_launcher.png",
         "source": "/home/wisnu/project/masakpadApp/android/app/src/main/res/mipmap-mdpi/ic_launcher.png"
+    },
+    {
+        "merged": "/home/ipung/Documents/PHASE3/tugas/masakpad-mobile-app/android/app/build/intermediates/res/merged/debug/mipmap-mdpi/ic_launcher.png",
+        "source": "/home/ipung/Documents/PHASE3/tugas/masakpad-mobile-app/android/app/src/main/res/mipmap-mdpi/ic_launcher.png"
     }
 ]
